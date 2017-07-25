@@ -35,6 +35,19 @@ even_sqr = [i**2 for i in b if i % 2 == 0]
 #alt = map(lambda x : x ** 2, filter(lambda x: x % 2 == 0,b))
 #assert alt_map == list(alt)
 
+# Note : Avoid using more than two expresion in the list
+
+#Excerise :
+
+mat = [[1,2,3,4,5],[3,4,5,6,7],[9,8,7,6,6,4]]
+
+pr_list = [x for x in mat for i in x]
+
+print (pr_list)
+
+
+
+
 
 
 
