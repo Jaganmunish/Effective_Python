@@ -39,20 +39,26 @@ even_sqr = [i**2 for i in b if i % 2 == 0]
 
 #Excerise :
 
-mat = [[1,2,3,4,5],[3,4,5,6,7],[9,8,7,6,6,4]]
+#mat = [[1,2,3,4,5],[3,4,5,6,7],[9,8,7,6,6,4]]
 
-pr_list = [x for x in mat for i in x]
+mat = [[1,2,3,4,5],[6,7,8,9,10],[11,12,13,14,15]]
+
+pr_list = [x for row in mat for x in row]
 
 print (pr_list)
 
+# Adding 10 for the conscutive numbers in the list
 
+mat1 = [[1,2,3,4],[20,30,40,50],[100,390,510,21,200]]
 
+lsch = [i+10 for val in mat1 for i in val]
 
+# Condition & looping in list comperhension
 
+ch = [1,2,3,4,5,6,7,8,8,9,10,12,42]
 
-
-
-
-
-
+fl = [x for x in ch if x >=3 if x <=10]
+fl1 = [x*100 for x in ch if x >=3 if x <=10]
+fl2 = [x*100 for x in ch if x >=3 if x <=10 if x %8 == 0]
+print (fl2)
 
