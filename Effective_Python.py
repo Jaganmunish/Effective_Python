@@ -146,4 +146,3 @@ zsl = ['one','two','three','four','five','six']
 nezl = dict(zip(zls,zsl))
 
 print (nezl)
-
