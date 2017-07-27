@@ -93,3 +93,57 @@ gen = ((x **2) for x in llist)
 
 #Enumerate
 
+# bit = 0
+#
+# for i in range(64):
+#     if randint(0,1):
+#         bit |= 1<< i
+
+name = ['Jagatheesh','Barathi','Gopi','Sabari','Viswa']
+
+# for i in name:
+#     print ('%s is Friends' % name)
+#
+# for i in range(len(name)):
+#     name1 = name[i]
+#     print ('%d: %s' % (i+1, name1))
+#
+# for i, name1 in enumerate(name):
+#     print ('%d : %s' % (i+1,name1))
+
+for item in enumerate(name):
+    print (item)
+
+# Zip
+
+name = ['Jagatheesh','Barathi','Gopi','Sabari','Viswa']
+
+lenth = [len(x) for x in name]
+longname = None
+maxlt = 0
+
+for i in range(len(name)):
+    count = lenth[i]
+    if count > maxlt:
+        longname = name[i]
+        maxlt = count
+
+print (longname)
+
+
+for name,count in zip(name,lenth):
+    if count > maxlt:
+        longname = name
+        maxlt = count
+
+
+print (longname)
+
+zls = [1,2,3,4,5,6]
+
+zsl = ['one','two','three','four','five','six']
+
+nezl = dict(zip(zls,zsl))
+
+print (nezl)
+
