@@ -59,6 +59,37 @@ ch = [1,2,3,4,5,6,7,8,8,9,10,12,42]
 
 fl = [x for x in ch if x >=3 if x <=10]
 fl1 = [x*100 for x in ch if x >=3 if x <=10]
-fl2 = [x*100 for x in ch if x >=3 if x <=10 if x %8 == 0]
+fl2 = [x*100 for x in ch if x >=3 if x <=10 if x % 8 == 0]
 print (fl2)
+
+#list comperhension for large input
+
+import os
+
+
+os.chdir("C:\\Users\\sadhja02\\Documents\\Process Documents\\Python Practice\\Practice input")
+
+#Find the lenght of the file
+
+lent = [len (i) for i in open("Textfile.txt")] # List comprehension
+print (lent)
+
+lenof = (len (i) for i in open("Textfile.txt"))
+
+print (next(lenof))
+
+llist = [100,340,980,670,509,100,500]
+
+genlis = [len(val)+ i for i in llist for val in open("Textfile.txt")]
+print (genlis)
+
+genlis1 = (len(val)+ 100 for val in open("Textfile.txt"))
+
+print (next(genlis1))
+
+gen = ((x, x**0.5) for x in llist)
+
+gen = ((x **2) for x in llist)
+
+#Enumerate
 
