@@ -1,0 +1,30 @@
+# NLTK - Natural Language Processing
+
+import nltk
+
+
+from nltk import sent_tokenize,word_tokenize
+
+
+#TOkenize
+#Two type of Tokenize [Word,Sentance]
+#Lexican & Corporas
+#Corporas - Body of the Text Ex: "Hello World, How are you"
+#Lexican - Words and their meaning
+#Lexican can be simple english or Jorgan "Words" (Dictionary Words)
+
+
+ex_txt = "Hi Mr.Jagatheesh, How are you, How is your python practice"
+
+print(sent_tokenize(ex_txt))
+print (word_tokenize(ex_txt))
+
+#print (nltk)
+
+#molis = list(dir(nltk))
+# Stop Words in NLTK
+
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+
+stopword = set(stopwords.words('english'))
