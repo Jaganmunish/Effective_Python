@@ -5,19 +5,31 @@ import nltk
 
 from nltk import sent_tokenize,word_tokenize
 
-
-#TOkenize
+import nltk
+#TOkenize - Spliting the paragraps into sentence , Spliting sentance into word
 #Two type of Tokenize [Word,Sentance]
-#Lexican & Corporas
-#Corporas - Body of the Text Ex: "Hello World, How are you"
-#Lexican - Words and their meaning
-#Lexican can be simple english or Jorgan "Words" (Dictionary Words)
 
+""""    #Lexican & Corporas
+Corporas - Body of the Text Ex: "Hello World, How are you"
+Lexican - Words and their meaning
+Lexican can be simple english or Jorgan "Words" (Dictionary Words)"""
 
-ex_txt = "Hi Mr.Jagatheesh, How are you, How is your python practice"
+# From Tokenize, Sentance tokenize
 
-print(sent_tokenize(ex_txt))
-print (word_tokenize(ex_txt))
+se_to = ["Hello World", "It's good to see Thanks for coming"]
+
+from nltk.tokenize import sent_tokenize
+
+sent_tokenize(se_to)
+
+# From Tokenize, Word Tokenize
+
+wr_to = ['Hi Mr.Jagatheesh How are you I am waiting for you']
+
+from nltk.tokenize import word_tokenize
+
+dir (nltk.word_tokenize)
+
 
 #print (nltk)
 
@@ -27,4 +39,14 @@ print (word_tokenize(ex_txt))
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 
-stopword = set(stopwords.words('english'))
+print (word_tokenize ('Hello jagatheesh, How are you'))
+#stopword = set(stopwords.words('english'))
+
+  #                   Tokenizer
+  #                   /   |    \
+  #   punkwordtokenizer   |    Treekwordtokenizer
+  #                 regexptokenizer
+  #                 /             \
+  # wordpunktokenizer             whitespacetokenizer
+
+
