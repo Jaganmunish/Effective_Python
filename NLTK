@@ -49,4 +49,34 @@ print (word_tokenize ('Hello jagatheesh, How are you'))
   #                 /             \
   # wordpunktokenizer             whitespacetokenizer
 
+# from nltk.tokenize import PunktWordTokenizer
+# putok = PunktWordTokenizer()
+# tokenizer.tokonize("How are you Buddy")
+# ['How', 'are', 'you', 'buddy']
+
+from nltk.tokenize import wordpunct_tokenize
+
+wrputk1 = word_tokenize('How are you, How is work')
+
+print (wrputk1)
+
+# TOkenizer sentence using Regexp
+from nltk.tokenize import regexp_tokenize
+
+retok = regexp_tokenize("Can't is a construction","[\w]+")
+print (retok)
+
+retok1 = regexp_tokenize("My Employee No's 8107147, will it is my SAP, ID'S", "[\D]+")
+
+print (retok1)
+
+#White space tokenizer
+
+whsp = "My Employee No's 8107147, will it is my SAP, ID'S"
+
+wwhsp1 = "Krishna Kumar Barathi Dasan Murali Kannan Gopi Don"
+
+tik1 = regexp_tokenize(wwhsp1,'\s', gaps = True)
+print (tik1)
+
 
