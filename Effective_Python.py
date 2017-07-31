@@ -147,3 +147,29 @@ nezl = dict(zip(zls,zsl))
 
 print (nezl)
 
+# Loopings
+
+for i in range(3):
+    print ('Loop  ' +str(i))
+else:
+    print ('Else Block!')
+
+for i in range(10):
+    print ("Looping " + str(i))
+    if i >= 15:
+        break
+else:
+    print ("Else Block....!.... ")
+
+for s in []:
+    print ("Never Run")
+else:
+    print ("For else block")
+
+for a in range(20):
+    if a >=10:
+        print ("List of Even!   ")
+        break
+else:
+    print ("No Even")
+
