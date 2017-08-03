@@ -189,3 +189,27 @@ for i in range(2, min(a,b) +1):
     else:
         print ("Coprime")
 
+# Finally block
+
+handel = open("C:\\Users\\sadhja02\\Desktop\\Assement\\Test.txt") # may case error
+try:
+    handel = open("C:\\Users\\sadhja02\\Desktop\\Assement\\Test.txt") # this will also case error
+finally:
+    handel = open("C:\\Users\\sadhja02\\Desktop\\Assement\\Test.txt",'r') # this will run
+
+# Function
+
+# Sorting a group of list
+
+def sort_index(num, grp):
+    def index(x):
+        if x in grp:
+            return (0, x)
+        return (1, x)
+    num.sort (key = index)
+
+nm = [8,3,4,6,8,9,3]
+vl = {1,2,7,6}
+
+sort_index(nm, vl)
+print(nm)
