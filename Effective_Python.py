@@ -213,3 +213,32 @@ vl = {1,2,7,6}
 
 sort_index(nm, vl)
 print(nm)
+
+# Generator instead of List
+
+def index_word(text):
+    result = []
+    if text:
+        result.append(0)
+    for index, string in enumerate(text):
+        if string == ' ':
+            result.append(index + 1)
+    return result
+
+add = 'Four score and seven years ago'
+
+result = index_word(add)
+print (result)
+
+# Generator function
+
+def index_word_it (text):
+    if text:
+        yield (0)
+    for index, letter in enumerate(text):
+        if letter == " ":
+            yield index + 1
+
+result = list(index_word_it(add))
+print (result)
+
