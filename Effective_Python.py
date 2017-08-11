@@ -91,5 +91,4 @@ gen = ((x, x**0.5) for x in llist)
 
 gen = ((x **2) for x in llist)
 
-#Enumerate
 
