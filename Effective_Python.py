@@ -243,3 +243,20 @@ result = list(index_word_it(add))
 print (result)
 
 # Last commit is with Enumerate
+
+
+#Reduce visual noice
+
+def log(message,values):
+    if not values:
+        print (message)
+    else:
+        value_str = ','.join(str(x) for x in values)
+        print ('%s: %s' %(message, value_str))
+
+
+log('My number are', [1,2])
+
+
+
+
