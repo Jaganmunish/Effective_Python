@@ -28,7 +28,11 @@ print (sqr_map)
 
 odd_cub = [i**3 for i in b if i % 3 == 0]
 
+type(odd_cub)
+
 even_sqr = [i**2 for i in b if i % 2 == 0]
+
+type(even_sqr)
 
 # Map function in list comperhension
 
@@ -145,7 +149,15 @@ zsl = ['one','two','three','four','five','six']
 
 nezl = dict(zip(zls,zsl))
 
+type(nezl)
+
 print (nezl)
+
+dis = [1,2,3,4,4,4,5,6,6,6,69,9]
+
+set(dis)
+
+dis
 
 # Loopings
 
