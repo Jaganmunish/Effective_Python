@@ -28,7 +28,11 @@ print (sqr_map)
 
 odd_cub = [i**3 for i in b if i % 3 == 0]
 
+type(odd_cub)
+
 even_sqr = [i**2 for i in b if i % 2 == 0]
+
+type(even_sqr)
 
 # Map function in list comperhension
 
@@ -90,5 +94,180 @@ print (next(genlis1))
 gen = ((x, x**0.5) for x in llist)
 
 gen = ((x **2) for x in llist)
+
+
+# bit = 0
+#
+# for i in range(64):
+#     if randint(0,1):
+#         bit |= 1<< i
+
+name = ['Jagatheesh','Barathi','Gopi','Sabari','Viswa']
+
+# for i in name:
+#     print ('%s is Friends' % name)
+#
+# for i in range(len(name)):
+#     name1 = name[i]
+#     print ('%d: %s' % (i+1, name1))
+#
+# for i, name1 in enumerate(name):
+#     print ('%d : %s' % (i+1,name1))
+
+for item in enumerate(name):
+    print (item)
+
+# Zip
+
+name = ['Jagatheesh','Barathi','Gopi','Sabari','Viswa']
+
+lenth = [len(x) for x in name]
+longname = None
+maxlt = 0
+
+for i in range(len(name)):
+    count = lenth[i]
+    if count > maxlt:
+        longname = name[i]
+        maxlt = count
+
+print (longname)
+
+
+for name,count in zip(name,lenth):
+    if count > maxlt:
+        longname = name
+        maxlt = count
+
+
+print (longname)
+
+zls = [1,2,3,4,5,6]
+
+zsl = ['one','two','three','four','five','six']
+
+nezl = dict(zip(zls,zsl))
+
+type(nezl)
+
+print (nezl)
+
+dis = [1,2,3,4,4,4,5,6,6,6,69,9]
+
+set(dis)
+
+dis
+
+# Loopings
+
+for i in range(3):
+    print ('Loop  ' +str(i))
+else:
+    print ('Else Block!')
+
+for i in range(10):
+    print ("Looping " + str(i))
+    if i >= 15:
+        break
+else:
+    print ("Else Block....!.... ")
+
+for s in []:
+    print ("Never Run")
+else:
+    print ("For else block")
+
+for a in range(20):
+    if a >=10:
+        print ("List of Even!   ")
+        break
+else:
+    print ("No Even")
+
+while False:
+    print ("Never Run")
+else:
+    print ("RUN")
+
+a = 4
+b = 9
+
+for i in range(2, min(a,b) +1):
+    print ("Testing" ,i)
+    if a % i == 0 and b % i == 0:
+        print ("NOt Coprime")
+        break
+    else:
+        print ("Coprime")
+
+# Finally block
+
+handel = open("C:\\Users\\sadhja02\\Desktop\\Assement\\Test.txt") # may case error
+try:
+    handel = open("C:\\Users\\sadhja02\\Desktop\\Assement\\Test.txt") # this will also case error
+finally:
+    handel = open("C:\\Users\\sadhja02\\Desktop\\Assement\\Test.txt",'r') # this will run
+
+# Function
+
+# Sorting a group of list
+
+def sort_index(num, grp):
+    def index(x):
+        if x in grp:
+            return (0, x)
+        return (1, x)
+    num.sort (key = index)
+
+nm = [8,3,4,6,8,9,3]
+vl = {1,2,7,6}
+
+sort_index(nm, vl)
+print(nm)
+
+# Generator instead of List
+
+def index_word(text):
+    result = []
+    if text:
+        result.append(0)
+    for index, string in enumerate(text):
+        if string == ' ':
+            result.append(index + 1)
+    return result
+
+add = 'Four score and seven years ago'
+
+result = index_word(add)
+print (result)
+
+# Generator function
+
+def index_word_it (text):
+    if text:
+        yield (0)
+    for index, letter in enumerate(text):
+        if letter == " ":
+            yield index + 1
+
+result = list(index_word_it(add))
+print (result)
+
+# Last commit is with Enumerate
+
+
+#Reduce visual noice
+
+def log(message,values):
+    if not values:
+        print (message)
+    else:
+        value_str = ','.join(str(x) for x in values)
+        print ('%s: %s' %(message, value_str))
+
+
+log('My number are', [1,2])
+
+
 
 
